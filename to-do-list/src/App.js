@@ -15,10 +15,9 @@ function App() {
 
     else if(edit){
       setList(list.map((item)=>{
-        if(item.id==editId){
+        if(item.id===editId){
           return({...item,todo:title})
         }
-        setEdit=false
         return item
       }))
     }
