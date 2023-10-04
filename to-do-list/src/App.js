@@ -58,10 +58,10 @@ function App() {
   };
 
   return (
-    <Container className="mt-5 bg-light border border-primary">
+    <Container className="mt-5 p-5 border border-primary bg-lightblue">
       <Row>
         <Col md={6} className="mx-auto">
-          <h1 className="text-danger text-strong text-center mb-4">To-Do App</h1>
+          <h1 className="p-1 text-maroon text-strong text-center mb-4 border border-rounded border-dark bg-light"><strong>To-Do App</strong></h1>
           <Form onSubmit={todoSubmit}>
             <Form.Group className="m-2">
               <Form.Control

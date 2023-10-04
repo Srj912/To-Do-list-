@@ -1,3 +1,21 @@
+body{
+  background-color: #0B5ED7;
+}
+
+.bg-lightblue{
+  background-color: #80aced;
+
+}
+
+.bg-lightblue2{
+  background-color: #a5bde0;
+
+}
+
+.text-maroon{
+  color: #0B5ED7
+}
+
 .App {
   text-align: center;
 }
