@@ -1,12 +1,25 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import { TodoList } from './components/TodoList';
 import './App.css';
 
+const getLocalStorage=()=>{
+  let list=localStorage.getItem('key')
+  if(list){
+    return JSON.parse(localStorage.getItem('key'))
+  }
+  else  
+    return[]
+}
+
 function App() {
   const [title,setTitle]=useState()  
-  const [list,setList]=useState([])
+  const [list,setList]=useState(getLocalStorage)
   const [edit,setEdit]=useState(false)
   const [editId,setEditid]=useState(null)
+
+  useEffect(()=>{
+    localStorage.setItem("key",JSON.stringify(list))
+  },[list])
   const todoSubmit = (e) => {
     e.preventDefault()
     if(!title){
